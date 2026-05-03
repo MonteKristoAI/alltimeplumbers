@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #BF2235;
+  --color-primary-deep: #8E1828;
+  --color-primary-soft: #FCEAEC;
+  --color-navy: #1B2E55;
+  --color-navy-ink: #0F1E3A;
+  --color-navy-mute: #3A4D78;
+  --color-cream: #F7F3EC;
+  --color-cream-deep: #EDE6D6;
+  --color-border: #E5DED1;
+  --color-border-mute: #CFC6B5;
+  --color-success: #1F7A4D;
+  --color-warn: #C97A1F;
+  --color-ink: #0F1E3A;
+
+  --color-background: var(--color-cream);
+  --color-foreground: var(--color-ink);
+  --color-card: #ffffff;
+  --color-card-foreground: var(--color-ink);
+  --color-popover: #ffffff;
+  --color-popover-foreground: var(--color-ink);
+  --color-primary-foreground: #ffffff;
+  --color-secondary: var(--color-cream-deep);
+  --color-secondary-foreground: var(--color-ink);
+  --color-muted: var(--color-cream-deep);
+  --color-muted-foreground: var(--color-navy-mute);
+  --color-accent: var(--color-cream-deep);
+  --color-accent-foreground: var(--color-ink);
+  --color-destructive: var(--color-primary-deep);
+  --color-destructive-foreground: #ffffff;
+  --color-input: var(--color-border);
+  --color-ring: var(--color-primary);
+
+  --radius: 0.5rem;
+
+  --font-display: var(--font-bricolage), system-ui, sans-serif;
+  --font-sans:    var(--font-inter), system-ui, sans-serif;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}

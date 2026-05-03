@@ -1,0 +1,48 @@
+{
+  "_meta": {
+    "source": "Firecrawl scrape of https://maps.app.goo.gl/27B8SeJbJJDSWqRv6 (Google's anti-bot consent wall returns a partial unauthenticated view)",
+    "scrapedAt": "2026-05-03",
+    "warning": "Authoritative review count + recent-review text are NOT obtainable from the unauthenticated Maps SPA. Phase-1 build should pull live data via the Google Places API at build time using a server-side key. The numbers below are placeholders that match what Google's public preview surfaced.",
+    "recommendation": "Before Phase-1 launch, switch to Places API. Antigravity: see plan §3.3 + §11. The placeholder allows the schema (AggregateRating) to validate locally; replace before going live."
+  },
+  "businessName": "All Time Plumbers, Inc.",
+  "category": "Plumber",
+  "fullAddress": "San Diego, CA 92127",
+  "phone": "(760) 201-6461",
+  "phoneTel": "+17602016461",
+  "hours": {
+    "all": "Open 24 hours",
+    "monday":    "00:00-24:00",
+    "tuesday":   "00:00-24:00",
+    "wednesday": "00:00-24:00",
+    "thursday":  "00:00-24:00",
+    "friday":    "00:00-24:00",
+    "saturday":  "00:00-24:00",
+    "sunday":    "00:00-24:00",
+    "_note": "Confirm with Pete before launch — Google view says '24h' but his site copy implies emergency-only after-hours."
+  },
+  "website": "https://alltimeplumbers.com/",
+  "googleMapsURL": "https://www.google.com/maps/place/All+Time+Plumbers,+Inc./@32.9962024,-117.1358175,2433m/data=!3m1!1e3!4m6!3m5!1s0x46a8bdacc8ead627:0x54e5e5993aec46a1!8m2!3d32.9962024!4d-117.1358176!16s%2Fg%2F11xn3chpq2!5m1!1e1",
+  "googleMapsShortURL": "https://maps.app.goo.gl/27B8SeJbJJDSWqRv6",
+  "placeId": "ChIJJ9bqyKy9qEYRoUbsOpnl5VQ",
+  "_placeIdNote": "Derived from URL; confirm in GBP dashboard before wiring schema",
+  "coordinates": {
+    "lat": 32.9962024,
+    "lng": -117.1358175
+  },
+  "starRating": 5.0,
+  "totalReviewCount": null,
+  "_reviewCountNote": "Firecrawl public-Maps scrape returned 0 (the consent-walled view hides counts). Pull from Places API server-side at build time. If Pete has fewer than 15 reviews, do NOT show count on hero — show only star + 'Owner-operated' badge until count > 15.",
+  "ownerCopy": "All Time Plumbers, Inc. | Trusted San Diego Plumbing Experts. When you need a reliable plumber in San Diego, CA, turn to All Time Plumbers, Inc. We provide fast, professional plumbing services for homes and businesses throughout San Diego County, backed by experienced technicians and honest pricing. From emergency plumbing repairs and leak detection to water heater installation, drain cleaning, and full plumbing system upgrades, our team is equipped to handle jobs of all sizes. We take pride in showing up on time, doing the job right, and treating your property with care. As a locally owned and operated company, All Time Plumbers, Inc. is committed to delivering dependable service you can trust 24/7. Serving San Diego, CA & surrounding areas. Residential & commercial plumbing. Emergency service available. Quality workmanship you can count on. If you're searching for a licensed plumber near you in San Diego, contact All Time Plumbers, Inc. today to schedule service or request a quote.",
+  "ownerCopyDate": "Jan 23, 2026",
+  "knownReviewsOnSite": [
+    {
+      "author": "Bita Hoffman",
+      "date": "2026-01-10",
+      "rating": null,
+      "text": "Pete did an amazing job work out remodel and continues to assist us as we need further work or assistance. He even came out on thanksgiving when we had an electrical problem. Highly recommend him and his company.",
+      "source": "alltimeplumbers.com/reviews"
+    }
+  ],
+  "rebuildSchedule": "weekly cron — pull via Places API at build time and refresh this file"
+}
