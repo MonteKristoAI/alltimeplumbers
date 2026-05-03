@@ -4,6 +4,7 @@ import { ServicesGrid } from "@/components/sections/ServicesGrid";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { PricingTiles } from "@/components/sections/PricingTiles";
 import { AreasMap } from "@/components/sections/AreasMap";
+import { GallerySection } from "@/components/sections/GallerySection";
 import { ReviewsCarousel } from "@/components/sections/ReviewsCarousel";
 import { OwnerIntro } from "@/components/sections/OwnerIntro";
 import { FAQ } from "@/components/sections/FAQ";
@@ -19,6 +20,7 @@ export default function Home() {
       <HowItWorks />
       <PricingTiles />
       <AreasMap />
+      <GallerySection />
       <ReviewsCarousel />
       <OwnerIntro />
       <FAQ faqs={HOME_FAQS} />

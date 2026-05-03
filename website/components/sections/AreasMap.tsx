@@ -5,11 +5,17 @@ import { MapPin } from "lucide-react";
 
 export function AreasMap() {
   return (
-    <section className="py-20 bg-cream-deep">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="areas" className="py-24 bg-cream-deep relative overflow-hidden">
+      {/* Decorative glow */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px] pointer-events-none"></div>
+
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-          <div className="w-full lg:w-1/2 space-y-6">
-            <h2 className="font-display font-extrabold text-3xl md:text-4xl text-ink">Areas We Serve</h2>
+          <div className="w-full lg:w-1/2 space-y-8">
+            <div>
+              <h2 className="text-primary font-bold tracking-widest uppercase text-sm mb-3">Service Areas</h2>
+              <h3 className="font-display font-extrabold text-4xl md:text-5xl text-ink">Where we work</h3>
+            </div>
             <p className="text-ink/70 text-lg leading-relaxed">
               Based in San Diego, we proudly serve homeowners and businesses across North County and the greater metro area. Fast, local response when you need it most.
             </p>

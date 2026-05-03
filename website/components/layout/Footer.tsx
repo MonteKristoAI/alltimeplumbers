@@ -26,8 +26,8 @@ export function Footer() {
             <h3 className="font-display font-bold text-lg text-white">Company</h3>
             <ul className="space-y-3 text-sm text-cream/80">
               <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
-              <li><Link href="/reviews" className="hover:text-white transition-colors">Customer Reviews</Link></li>
-              <li><Link href="/gallery" className="hover:text-white transition-colors">Project Gallery</Link></li>
+              <li><Link href="/#reviews" className="hover:text-white transition-colors">Customer Reviews</Link></li>
+              <li><Link href="/#gallery" className="hover:text-white transition-colors">Project Gallery</Link></li>
               <li><Link href="/blog" className="hover:text-white transition-colors">Plumbing Blog</Link></li>
               <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
             </ul>

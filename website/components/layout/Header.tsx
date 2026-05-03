@@ -13,9 +13,9 @@ export function Header() {
           </Link>
           <nav className="hidden md:flex gap-6">
             <Link href="/services" className="text-sm font-medium text-ink hover:text-primary transition-colors">Services</Link>
-            <Link href="/areas/san-diego" className="text-sm font-medium text-ink hover:text-primary transition-colors">Areas</Link>
-            <Link href="/reviews" className="text-sm font-medium text-ink hover:text-primary transition-colors">Reviews</Link>
-            <Link href="/gallery" className="text-sm font-medium text-ink hover:text-primary transition-colors">Gallery</Link>
+            <Link href="/#areas" className="text-sm font-medium text-ink hover:text-primary transition-colors">Areas</Link>
+            <Link href="/#gallery" className="text-sm font-medium text-ink hover:text-primary transition-colors">Gallery</Link>
+            <Link href="/#reviews" className="text-sm font-medium text-ink hover:text-primary transition-colors">Reviews</Link>
             <Link href="/blog" className="text-sm font-medium text-ink hover:text-primary transition-colors">Blog</Link>
             <Link href="/about" className="text-sm font-medium text-ink hover:text-primary transition-colors">About</Link>
             <Link href="/contact" className="text-sm font-medium text-ink hover:text-primary transition-colors">Contact</Link>
