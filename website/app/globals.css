@@ -55,4 +55,20 @@
   .section-shadow-top {
     box-shadow: 0 -20px 40px -10px rgba(0, 0, 0, 0.1);
   }
+  .dialog-overlay-in {
+    animation: fade-in 0.5s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+  }
+  .dialog-content-in {
+    animation: dialog-scale-in 0.5s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+  }
+}
+
+@keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes dialog-scale-in {
+  0% { transform: translate(-50%, -50%) scale(0.5); opacity: 0; }
+  100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
 }
