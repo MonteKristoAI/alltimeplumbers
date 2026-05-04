@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { FinalCTA } from "@/components/sections/FinalCTA";
+import { BlogHero } from "@/components/sections/BlogHero";
 
 export const metadata: Metadata = {
   title: "Plumbing Blog | All Time Plumbers",
@@ -31,22 +32,32 @@ const posts = [
 export default function BlogPage() {
   return (
     <>
-      <div className="bg-cream pt-24 pb-12 text-center">
-        <h1 className="font-display font-extrabold text-4xl md:text-5xl text-ink">Plumbing Blog</h1>
-      </div>
+      <BlogHero />
       
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 max-w-4xl">
+      <section className="py-24 bg-neutral-950 relative overflow-hidden border-t border-white/10 section-shadow-top">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 opacity-25 pointer-events-none mix-blend-luminosity"
+          style={{ backgroundImage: 'url("/images/bg_gallery.png")', backgroundSize: 'cover', backgroundPosition: 'center' }}
+        ></div>
+        
+        {/* Dark gradient overlay to ensure text readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-neutral-950/80 via-transparent to-neutral-950/90 pointer-events-none"></div>
+
+        {/* Static Glow */}
+        <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[120px] pointer-events-none -translate-y-1/2 -translate-x-1/4"></div>
+
+        <div className="container mx-auto px-4 max-w-4xl relative z-10">
           <div className="space-y-12">
             {posts.map((post) => (
-              <article key={post.slug} className="border-b border-border pb-12 last:border-0">
-                <div className="text-sm font-semibold text-primary mb-3">{post.date}</div>
-                <h2 className="font-display font-extrabold text-2xl md:text-3xl text-ink mb-4 hover:text-primary transition-colors">
+              <article key={post.slug} className="border-b border-white/10 pb-12 last:border-0 relative">
+                <div className="text-sm font-semibold text-primary mb-3 tracking-widest uppercase">{post.date}</div>
+                <h2 className="font-display font-extrabold text-2xl md:text-4xl text-white mb-4 hover:text-primary transition-colors drop-shadow-md">
                   <Link href={`/blog/${post.slug}`}>{post.title}</Link>
                 </h2>
-                <p className="text-lg text-ink/70 mb-6">{post.excerpt}</p>
-                <Link href={`/blog/${post.slug}`} className="text-navy-ink font-bold hover:text-primary transition-colors inline-flex items-center">
-                  Read article &rarr;
+                <p className="text-xl text-white/70 mb-6 font-light leading-relaxed">{post.excerpt}</p>
+                <Link href={`/blog/${post.slug}`} className="text-white font-bold hover:text-primary transition-colors inline-flex items-center text-sm uppercase tracking-wider group">
+                  Read article <span className="ml-2 group-hover:translate-x-1 transition-transform">&rarr;</span>
                 </Link>
               </article>
             ))}

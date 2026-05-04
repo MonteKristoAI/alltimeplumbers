@@ -30,14 +30,20 @@ export function Header() {
 
         {/* Center: Navigation */}
         <nav className="hidden lg:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
-          {['Services', 'Blog', 'About', 'Contact'].map((item) => (
+          {[
+            { name: 'Home', href: '/' },
+            { name: 'Services', href: '/services' },
+            { name: 'Blog', href: '/blog' },
+            { name: 'About', href: '/about' },
+            { name: 'Contact', href: '/contact' }
+          ].map((item) => (
             <Link 
-              key={item}
-              href={`/${item.toLowerCase()}`} 
+              key={item.name}
+              href={item.href} 
               className="relative text-sm font-bold text-ink uppercase tracking-wider group py-2"
             >
-              {item}
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+              {item.name}
+              <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
             </Link>
           ))}
         </nav>

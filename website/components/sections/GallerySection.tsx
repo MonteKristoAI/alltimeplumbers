@@ -54,8 +54,8 @@ export function GallerySection() {
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-ink/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </div>
                 <div className="p-8 relative flex-1 flex flex-col justify-center">
-                  <div className="text-xs font-bold text-primary mb-3 uppercase tracking-wider">Service</div>
-                  <h4 className="font-display font-bold text-xl text-white group-hover:text-primary transition-colors">{service.title}</h4>
+                  <div className="text-xs font-bold text-primary mb-3 uppercase tracking-wider">{service.title}</div>
+                  <h4 className="font-display font-bold text-xl text-white group-hover:text-primary transition-colors">{service.galleryTitle}</h4>
                 </div>
               </Link>
             </motion.div>

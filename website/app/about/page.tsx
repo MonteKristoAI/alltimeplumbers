@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { OwnerIntro } from "@/components/sections/OwnerIntro";
 import { FinalCTA } from "@/components/sections/FinalCTA";
+import { AboutHero } from "@/components/sections/AboutHero";
 
 export const metadata: Metadata = {
   title: "About Us | All Time Plumbers",
@@ -10,9 +11,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <div className="bg-cream pt-24 pb-12 text-center">
-        <h1 className="font-display font-extrabold text-4xl md:text-5xl text-ink">About Us</h1>
-      </div>
+      <AboutHero />
       <OwnerIntro />
       <FinalCTA />
     </>

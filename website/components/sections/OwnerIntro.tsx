@@ -28,9 +28,9 @@ export function OwnerIntro() {
             className="w-full md:w-2/5 flex justify-center relative"
           >
             <div className="absolute inset-0 bg-primary/20 rounded-full blur-[50px] scale-90"></div>
-            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white/10 shadow-[0_10px_40px_rgba(0,0,0,0.4)] bg-navy-mute flex items-center justify-center group">
+            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-[6px] border-primary-deep shadow-[0_20px_50px_rgba(0,0,0,0.9)] bg-black flex items-center justify-center group">
                <Image src="/images/pete_portrait.png" alt="Pete McNamara, Owner of All Time Plumbers" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
-               <div className="absolute inset-0 border-8 border-navy-ink rounded-full pointer-events-none"></div>
+               <div className="absolute inset-0 border-4 border-black/20 rounded-full pointer-events-none"></div>
             </div>
           </motion.div>
           <motion.div 
