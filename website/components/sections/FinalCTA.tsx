@@ -6,6 +6,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { motion } from "framer-motion";
 
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+
 export function FinalCTA() {
   return (
     <section id="contact" className="py-24 bg-navy-ink text-white relative overflow-hidden">
@@ -119,20 +121,24 @@ export function FinalCTA() {
                 <Input id="email" type="email" placeholder="john@example.com" className="bg-white/5 border-white/10 focus-visible:ring-primary focus-visible:border-primary text-white placeholder:text-white/30 backdrop-blur-sm" />
               </div>
               <div className="space-y-2">
-                <label htmlFor="service" className="text-sm font-medium text-white/80">Type of Service</label>
-                <select id="service" className="flex h-10 w-full rounded-md border border-white/10 bg-navy-ink/50 backdrop-blur-sm px-3 py-2 text-sm text-white ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-white/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 appearance-none">
-                  <option value="" className="bg-navy-ink">Select a service...</option>
-                  <option value="leak" className="bg-navy-ink">Leak Repair</option>
-                  <option value="water-heater" className="bg-navy-ink">Water Heater</option>
-                  <option value="drain" className="bg-navy-ink">Drain Cleaning</option>
-                  <option value="other" className="bg-navy-ink">Other Plumbing Issue</option>
-                </select>
+                <label className="text-sm font-medium text-white/80">Type of Service</label>
+                <Select>
+                  <SelectTrigger className="w-full bg-white/5 border-white/10 text-white placeholder:text-white/30 cursor-pointer backdrop-blur-sm focus:ring-primary h-10">
+                    <SelectValue placeholder="Select a service..." />
+                  </SelectTrigger>
+                  <SelectContent className="bg-navy-ink border border-white/10 text-white">
+                    <SelectItem value="leak" className="focus:bg-primary/20 focus:text-white cursor-pointer">Leak Repair</SelectItem>
+                    <SelectItem value="water-heater" className="focus:bg-primary/20 focus:text-white cursor-pointer">Water Heater</SelectItem>
+                    <SelectItem value="drain" className="focus:bg-primary/20 focus:text-white cursor-pointer">Drain Cleaning</SelectItem>
+                    <SelectItem value="other" className="focus:bg-primary/20 focus:text-white cursor-pointer">Other Plumbing Issue</SelectItem>
+                  </SelectContent>
+                </Select>
               </div>
               <div className="space-y-2">
                 <label htmlFor="message" className="text-sm font-medium text-white/80">How can we help?</label>
                 <Textarea id="message" placeholder="Describe your plumbing issue..." className="bg-white/5 border-white/10 focus-visible:ring-primary focus-visible:border-primary min-h-[120px] text-white placeholder:text-white/30 backdrop-blur-sm resize-none" />
               </div>
-              <Button type="submit" className="w-full bg-primary hover:bg-primary-deep text-white font-bold py-6 text-lg rounded-full mt-4 transition-all hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(191,34,53,0.4)]">
+              <Button type="submit" className="w-full bg-primary hover:bg-primary-deep text-white font-bold py-6 text-lg rounded-full mt-4 transition-all hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(191,34,53,0.4)] cursor-pointer">
                 Send Request
               </Button>
             </form>

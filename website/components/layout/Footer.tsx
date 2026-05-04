@@ -5,7 +5,7 @@ export function Footer() {
   return (
     <footer className="bg-navy-ink text-cream pt-16 pb-24 md:pb-8">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
           {/* Brand */}
           <div className="space-y-6">
             <Link href="/" className="flex items-center gap-2 font-display font-bold text-2xl tracking-tight text-white">
@@ -61,18 +61,6 @@ export function Footer() {
               <li><Link href="/services/leak-repair" className="hover:text-white transition-colors">Leak Detection & Repair</Link></li>
               <li><Link href="/services/repipe" className="hover:text-white transition-colors">Whole-Home Repipe</Link></li>
               <li><Link href="/services/emergency" className="hover:text-white transition-colors text-primary-soft">24/7 Emergency Plumber</Link></li>
-            </ul>
-          </div>
-
-          {/* Service Areas */}
-          <div className="space-y-6">
-            <h3 className="font-display font-bold text-lg text-white">Service Areas</h3>
-            <ul className="space-y-3 text-sm text-cream/80">
-              <li><Link href="/areas/san-diego" className="hover:text-white transition-colors">San Diego</Link></li>
-              <li><Link href="/areas/san-diego" className="hover:text-white transition-colors">Rancho Bernardo</Link></li>
-              <li><Link href="/areas/san-diego" className="hover:text-white transition-colors">Poway</Link></li>
-              <li><Link href="/areas/san-diego" className="hover:text-white transition-colors">4S Ranch</Link></li>
-              <li><Link href="/areas/san-diego" className="hover:text-white transition-colors">Escondido</Link></li>
             </ul>
           </div>
         </div>

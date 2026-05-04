@@ -12,7 +12,8 @@ export function HowItWorks() {
   });
 
   // The line scales from 0 to 1 as we scroll through the section
-  const scaleX = useTransform(scrollYProgress, [0, 0.8], [0, 1]);
+  // Adjusted so it finishes filling up earlier (e.g. at 60% scroll progress)
+  const scaleX = useTransform(scrollYProgress, [0, 0.6], [0, 1]);
 
   return (
     <section ref={containerRef} className="py-24 bg-navy-ink relative overflow-hidden">
