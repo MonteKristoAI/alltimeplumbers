@@ -59,38 +59,41 @@ export function FinalCTA() {
             </div>
           </div>
 
-          <div className="bg-white rounded-2xl p-8 md:p-10 shadow-2xl relative">
-            <h4 className="font-display font-bold text-2xl text-ink mb-6">Request a Service</h4>
-            <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+          <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-8 md:p-10 shadow-[0_0_40px_rgba(0,0,0,0.3)] border border-white/10 relative overflow-hidden">
+            {/* Subtle inner glow */}
+            <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent pointer-events-none"></div>
+
+            <h4 className="font-display font-bold text-2xl text-white mb-6 relative z-10">Request a Service</h4>
+            <form className="space-y-5 relative z-10" onSubmit={(e) => e.preventDefault()}>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <label htmlFor="name" className="text-sm font-medium text-ink">Full Name</label>
-                  <Input id="name" placeholder="John Doe" className="bg-cream border-border focus-visible:ring-primary text-ink" />
+                  <label htmlFor="name" className="text-sm font-medium text-white/80">Full Name</label>
+                  <Input id="name" placeholder="John Doe" className="bg-white/5 border-white/10 focus-visible:ring-primary focus-visible:border-primary text-white placeholder:text-white/30 backdrop-blur-sm" />
                 </div>
                 <div className="space-y-2">
-                  <label htmlFor="phone" className="text-sm font-medium text-ink">Phone Number</label>
-                  <Input id="phone" type="tel" placeholder="(760) 555-0123" className="bg-cream border-border focus-visible:ring-primary text-ink" />
+                  <label htmlFor="phone" className="text-sm font-medium text-white/80">Phone Number</label>
+                  <Input id="phone" type="tel" placeholder="(760) 555-0123" className="bg-white/5 border-white/10 focus-visible:ring-primary focus-visible:border-primary text-white placeholder:text-white/30 backdrop-blur-sm" />
                 </div>
               </div>
               <div className="space-y-2">
-                <label htmlFor="email" className="text-sm font-medium text-ink">Email Address</label>
-                <Input id="email" type="email" placeholder="john@example.com" className="bg-cream border-border focus-visible:ring-primary text-ink" />
+                <label htmlFor="email" className="text-sm font-medium text-white/80">Email Address</label>
+                <Input id="email" type="email" placeholder="john@example.com" className="bg-white/5 border-white/10 focus-visible:ring-primary focus-visible:border-primary text-white placeholder:text-white/30 backdrop-blur-sm" />
               </div>
               <div className="space-y-2">
-                <label htmlFor="service" className="text-sm font-medium text-ink">Type of Service</label>
-                <select id="service" className="flex h-10 w-full rounded-md border border-border bg-cream px-3 py-2 text-sm text-ink ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
-                  <option value="">Select a service...</option>
-                  <option value="leak">Leak Repair</option>
-                  <option value="water-heater">Water Heater</option>
-                  <option value="drain">Drain Cleaning</option>
-                  <option value="other">Other Plumbing Issue</option>
+                <label htmlFor="service" className="text-sm font-medium text-white/80">Type of Service</label>
+                <select id="service" className="flex h-10 w-full rounded-md border border-white/10 bg-navy-ink/50 backdrop-blur-sm px-3 py-2 text-sm text-white ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-white/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 appearance-none">
+                  <option value="" className="bg-navy-ink">Select a service...</option>
+                  <option value="leak" className="bg-navy-ink">Leak Repair</option>
+                  <option value="water-heater" className="bg-navy-ink">Water Heater</option>
+                  <option value="drain" className="bg-navy-ink">Drain Cleaning</option>
+                  <option value="other" className="bg-navy-ink">Other Plumbing Issue</option>
                 </select>
               </div>
               <div className="space-y-2">
-                <label htmlFor="message" className="text-sm font-medium text-ink">How can we help?</label>
-                <Textarea id="message" placeholder="Describe your plumbing issue..." className="bg-cream border-border focus-visible:ring-primary min-h-[120px] text-ink" />
+                <label htmlFor="message" className="text-sm font-medium text-white/80">How can we help?</label>
+                <Textarea id="message" placeholder="Describe your plumbing issue..." className="bg-white/5 border-white/10 focus-visible:ring-primary focus-visible:border-primary min-h-[120px] text-white placeholder:text-white/30 backdrop-blur-sm resize-none" />
               </div>
-              <Button type="submit" className="w-full bg-primary hover:bg-primary-deep text-white font-bold py-6 text-lg rounded-full mt-4 transition-all hover:-translate-y-1 hover:shadow-xl">
+              <Button type="submit" className="w-full bg-primary hover:bg-primary-deep text-white font-bold py-6 text-lg rounded-full mt-4 transition-all hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(191,34,53,0.4)]">
                 Send Request
               </Button>
             </form>
