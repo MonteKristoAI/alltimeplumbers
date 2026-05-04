@@ -10,7 +10,7 @@ export function StickyCallBar() {
   const isVisible = useStickyCTA();
   const pathname = usePathname();
 
-  if (pathname === "/book") {
+  if (pathname === "/book" || (pathname.startsWith("/services/") && pathname !== "/services")) {
     return null;
   }
 

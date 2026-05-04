@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, MapPin, Clock } from "lucide-react";
 
 export function Footer() {
@@ -8,8 +9,10 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="space-y-6">
-            <Link href="/" className="flex items-center gap-2 font-display font-bold text-2xl tracking-tight text-white">
-              <span className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center text-sm">A</span>
+            <Link href="/" className="flex items-center gap-3 font-display font-bold text-2xl tracking-tight text-white group">
+              <div className="relative w-10 h-10 drop-shadow-md bg-white rounded-full p-1 shrink-0 transition-transform duration-300 group-hover:scale-110">
+                <Image src="/images/logo_alltime.png" alt="All Time Plumbers" fill className="object-contain p-1" />
+              </div>
               All Time Plumbers
             </Link>
             <p className="text-cream/80 text-sm leading-relaxed">

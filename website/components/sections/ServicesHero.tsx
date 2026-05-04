@@ -1,18 +1,16 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
-import { Phone, CalendarCheck } from "lucide-react";
 import { motion } from "framer-motion";
 
-export function Hero() {
+export function ServicesHero() {
   return (
     <section 
-      className="relative min-h-[95vh] flex items-center justify-center overflow-hidden bg-navy-ink pt-20"
+      className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-navy-ink pt-28 pb-24"
     >
       <Image 
-        src="/images/hero_bg.png" 
-        alt="Modern bathroom plumbing" 
+        src="/images/bg_services_hero.png" 
+        alt="Professional plumbing tools" 
         fill 
         priority
         className="object-cover opacity-40 mix-blend-luminosity scale-105"
@@ -42,7 +40,7 @@ export function Hero() {
         ></motion.div>
       </div>
 
-      {/* Complex cinematic gradient overlay (reduced to show background better) */}
+      {/* Complex cinematic gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-navy-ink/60 via-transparent to-navy-ink/90"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(15,30,58,0.7)_100%)]"></div>
       
@@ -57,41 +55,16 @@ export function Hero() {
           className="max-w-4xl space-y-8"
         >
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 backdrop-blur-md mb-4 shadow-[0_0_15px_rgba(255,255,255,0.05)]">
-            <span className="flex h-2 w-2 rounded-full bg-green-500 animate-pulse shadow-[0_0_8px_rgba(34,197,94,0.8)]"></span>
-            <span className="text-xs font-semibold text-white tracking-widest uppercase">24/7 Emergency Service</span>
+            <span className="text-xs font-semibold text-white tracking-widest uppercase">Expert Solutions</span>
           </div>
 
           <h1 className="font-display font-extrabold text-5xl sm:text-6xl lg:text-7xl tracking-tight text-white leading-tight drop-shadow-2xl">
-            San Diego plumbing, <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white/80 to-white/40">when you need it.</span>
+            Our Services
           </h1>
           
-          <p className="text-xl sm:text-2xl text-white/80 max-w-2xl mx-auto leading-relaxed font-light">
-            Fast response. Transparent pricing. Done right the first time. 
-            <span className="block mt-4 text-sm font-semibold tracking-widest text-primary uppercase">CSLB Lic #1134776</span>
+          <p className="text-xl sm:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed font-light">
+            From minor leak repairs and drain cleaning to complete tankless water heater installations, our team handles it all. We bring years of expertise, modern tools, and transparent pricing to every job, ensuring your home's plumbing operates flawlessly.
           </p>
-          
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8"
-          >
-            <Link 
-              href="/book" 
-              className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white bg-primary rounded-full hover:bg-primary-deep transition-all duration-300 shadow-[0_0_40px_rgba(191,34,53,0.4)] hover:shadow-[0_0_60px_rgba(191,34,53,0.6)] hover:-translate-y-1"
-            >
-              <CalendarCheck className="w-5 h-5 mr-2" />
-              Book a service
-            </Link>
-            <a 
-              href="tel:+17602016461" 
-              className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white bg-white/5 backdrop-blur-md border border-white/20 rounded-full hover:bg-white/10 transition-all duration-300 hover:-translate-y-1 shadow-[0_0_20px_rgba(255,255,255,0.05)]"
-            >
-              <Phone className="w-5 h-5 mr-2" />
-              Call (760) 201-6461
-            </a>
-          </motion.div>
         </motion.div>
       </div>
     </section>

@@ -15,7 +15,16 @@ const iconMap: Record<string, React.ReactNode> = {
 
 export function ServicesGrid() {
   return (
-    <section className="py-24 bg-navy-ink relative overflow-hidden">
+    <section className="py-24 bg-neutral-950 relative overflow-hidden border-t border-white/10 section-shadow-top">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 opacity-25 pointer-events-none mix-blend-luminosity"
+        style={{ backgroundImage: 'url("/images/bg_services_plumbing.png")', backgroundSize: 'cover', backgroundPosition: 'center' }}
+      ></div>
+      
+      {/* Dark gradient overlay to ensure text readability */}
+      <div className="absolute inset-0 bg-gradient-to-b from-neutral-950/80 via-transparent to-neutral-950/90 pointer-events-none"></div>
+
       {/* Animated Gradient Backgrounds */}
       <motion.div 
         animate={{ 
@@ -57,7 +66,7 @@ export function ServicesGrid() {
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 
-                <div className="bg-navy-ink/50 group-hover:bg-primary rounded-full p-4 mb-6 shadow-sm transition-colors duration-300 border border-white/5">
+                <div className="bg-white group-hover:bg-primary rounded-full p-4 mb-6 shadow-sm transition-colors duration-300 border border-white/10">
                   {iconMap[service.icon]}
                 </div>
                 <h3 className="font-display font-bold text-lg text-white mb-3">

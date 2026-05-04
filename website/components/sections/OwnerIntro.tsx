@@ -5,7 +5,16 @@ import { motion } from "framer-motion";
 
 export function OwnerIntro() {
   return (
-    <section className="py-24 bg-navy-ink relative overflow-hidden">
+    <section className="py-24 bg-neutral-950 relative overflow-hidden border-t border-white/10 section-shadow-top">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 opacity-25 pointer-events-none mix-blend-luminosity"
+        style={{ backgroundImage: 'url("/images/bg_owner.png")', backgroundSize: 'cover', backgroundPosition: 'center' }}
+      ></div>
+      
+      {/* Dark gradient overlay to ensure text readability */}
+      <div className="absolute inset-0 bg-gradient-to-b from-neutral-950/80 via-transparent to-neutral-950/90 pointer-events-none"></div>
+
       {/* Decorative glow */}
       <div className="absolute top-1/2 left-0 w-[400px] h-[400px] bg-primary/10 rounded-full blur-[120px] pointer-events-none -translate-y-1/2 -translate-x-1/2"></div>
 

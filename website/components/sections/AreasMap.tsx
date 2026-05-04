@@ -8,7 +8,18 @@ import { motion } from "framer-motion";
 
 export function AreasMap() {
   return (
-    <section id="areas" className="py-24 bg-navy-ink relative overflow-hidden">
+    <section id="areas" className="py-24 bg-navy-ink relative overflow-hidden border-t border-white/10 section-shadow-top">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 opacity-40 pointer-events-none mix-blend-luminosity"
+        style={{ backgroundImage: 'url("/images/bg_areas.png")', backgroundSize: 'cover', backgroundPosition: 'center' }}
+      ></div>
+      
+      {/* Complex cinematic gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-navy-ink/60 via-transparent to-navy-ink/90 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(15,30,58,0.7)_100%)] pointer-events-none"></div>
+
+      {/* Decorative glow */}
       {/* Decorative glow */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[120px] pointer-events-none -translate-y-1/2 translate-x-1/4"></div>
 

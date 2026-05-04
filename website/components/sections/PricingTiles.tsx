@@ -7,7 +7,16 @@ import { motion } from "framer-motion";
 
 export function PricingTiles() {
   return (
-    <section className="py-24 bg-navy-ink relative overflow-hidden">
+    <section className="py-24 bg-neutral-950 relative overflow-hidden border-t border-white/10 section-shadow-top">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 opacity-25 pointer-events-none mix-blend-luminosity"
+        style={{ backgroundImage: 'url("/images/bg_pricing.png")', backgroundSize: 'cover', backgroundPosition: 'center' }}
+      ></div>
+      
+      {/* Dark gradient overlay to ensure text readability */}
+      <div className="absolute inset-0 bg-gradient-to-b from-neutral-950/80 via-transparent to-neutral-950/90 pointer-events-none"></div>
+
       {/* Animated Gradient Backgrounds */}
       <motion.div 
         animate={{ 

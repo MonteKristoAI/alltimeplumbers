@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { SERVICES } from "@/data/services";
 import { FinalCTA } from "@/components/sections/FinalCTA";
-import { PricingTiles } from "@/components/sections/PricingTiles";
+import { ServiceDetailHero } from "@/components/sections/ServiceDetailHero";
 import { createServiceSchema } from "@/lib/schema";
 
 export function generateStaticParams() {
@@ -34,13 +34,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <div className="bg-cream py-24 text-center">
-        <div className="container mx-auto px-4 max-w-3xl">
-          <h1 className="font-display font-extrabold text-4xl md:text-5xl text-ink mb-6">{service.title}</h1>
-          <p className="text-xl text-ink/80">{service.shortDesc}</p>
-        </div>
-      </div>
-      <PricingTiles />
+      <ServiceDetailHero service={service} />
       <FinalCTA />
     </>
   );
