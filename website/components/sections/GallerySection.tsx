@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export function GallerySection() {
   const images = [
@@ -52,15 +55,28 @@ export function GallerySection() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/10 rounded-full blur-[150px] pointer-events-none"></div>
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-16 space-y-4">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16 space-y-4"
+        >
           <h2 className="text-primary font-bold tracking-widest uppercase text-sm">Our Work</h2>
           <h3 className="font-display font-extrabold text-4xl md:text-5xl text-white drop-shadow-lg">Project Gallery</h3>
           <p className="text-lg text-white/70 max-w-2xl mx-auto font-light">See the quality of our plumbing work across San Diego.</p>
-        </div>
+        </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {images.map((img) => (
-            <div key={img.id} className="bg-white/5 backdrop-blur-md rounded-2xl overflow-hidden shadow-2xl border border-white/10 group hover:border-white/30 hover:shadow-[0_20px_40px_rgba(0,0,0,0.5)] transition-all duration-500 hover:-translate-y-2">
+          {images.map((img, index) => (
+            <motion.div 
+              key={img.id} 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="bg-white/5 backdrop-blur-md rounded-2xl overflow-hidden shadow-2xl border border-white/10 group hover:border-white/30 hover:shadow-[0_20px_40px_rgba(0,0,0,0.5)] transition-all duration-500 hover:-translate-y-2"
+            >
               <div className="aspect-[4/3] relative overflow-hidden flex items-center justify-center">
                 <Image 
                   src={img.src} 
@@ -74,7 +90,7 @@ export function GallerySection() {
                 <div className="text-xs font-bold text-primary mb-3 uppercase tracking-wider">{img.category}</div>
                 <h4 className="font-display font-bold text-xl text-white group-hover:text-primary transition-colors">{img.title}</h4>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

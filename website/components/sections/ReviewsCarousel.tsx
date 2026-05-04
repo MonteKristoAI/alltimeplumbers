@@ -55,7 +55,13 @@ export function ReviewsCarousel() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-primary/20 rounded-full blur-[120px] pointer-events-none"></div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16 space-y-4">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16 space-y-4"
+        >
           <h2 className="text-primary font-bold tracking-widest uppercase text-sm">Testimonials</h2>
           <h3 className="font-display font-extrabold text-4xl md:text-5xl text-white">Don't just take our word for it</h3>
           <div className="flex items-center justify-center gap-2 text-primary font-bold text-lg mt-4">
@@ -66,7 +72,7 @@ export function ReviewsCarousel() {
             </div>
             <span className="text-white">5.0 Average Rating</span>
           </div>
-        </div>
+        </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {reviews.map((review, i) => (

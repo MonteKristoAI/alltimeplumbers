@@ -19,13 +19,19 @@ export function PricingTiles() {
       ></motion.div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16 max-w-3xl mx-auto">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16 max-w-3xl mx-auto"
+        >
           <h2 className="text-primary font-bold tracking-widest uppercase text-sm mb-3">No Surprises</h2>
           <h3 className="font-display font-extrabold text-4xl md:text-5xl text-white mb-6">Transparent Pricing</h3>
           <p className="text-white/70 text-lg font-light">
             We don't believe in "free estimates" that hide the real cost. Here is what you can expect to pay for common jobs.
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <motion.div 

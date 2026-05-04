@@ -4,6 +4,7 @@ import { Phone, CalendarCheck, MapPin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { motion } from "framer-motion";
 
 export function FinalCTA() {
   return (
@@ -17,18 +18,50 @@ export function FinalCTA() {
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           
-          <div className="space-y-8">
+          <motion.div 
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+            className="space-y-8"
+          >
             <div>
-              <h2 className="text-primary font-bold tracking-widest uppercase text-sm mb-3">Get in Touch</h2>
-              <h3 className="font-display font-extrabold text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight">
+              <motion.h2 
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.2 }}
+                className="text-primary font-bold tracking-widest uppercase text-sm mb-3"
+              >
+                Get in Touch
+              </motion.h2>
+              <motion.h3 
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.3 }}
+                className="font-display font-extrabold text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight"
+              >
                 Ready to fix your plumbing?
-              </h3>
-              <p className="text-lg text-white/70 font-light leading-relaxed">
+              </motion.h3>
+              <motion.p 
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.4 }}
+                className="text-lg text-white/70 font-light leading-relaxed"
+              >
                 Don't wait until a small leak becomes a major disaster. Fill out the form or give us a call for fast, professional service in San Diego.
-              </p>
+              </motion.p>
             </div>
 
-            <div className="space-y-6 pt-4">
+            <motion.div 
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.5 }}
+              className="space-y-6 pt-4"
+            >
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
                   <Phone className="w-5 h-5 text-primary" />
@@ -56,10 +89,16 @@ export function FinalCTA() {
                   <p className="text-white/70">San Diego County & North County</p>
                 </div>
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
-          <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-8 md:p-10 shadow-[0_0_40px_rgba(0,0,0,0.3)] border border-white/10 relative overflow-hidden">
+          <motion.div 
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="bg-white/5 backdrop-blur-xl rounded-2xl p-8 md:p-10 shadow-[0_0_40px_rgba(0,0,0,0.3)] border border-white/10 relative overflow-hidden"
+          >
             {/* Subtle inner glow */}
             <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent pointer-events-none"></div>
 
@@ -97,7 +136,7 @@ export function FinalCTA() {
                 Send Request
               </Button>
             </form>
-          </div>
+          </motion.div>
 
         </div>
       </div>

@@ -27,14 +27,20 @@ export function ServicesGrid() {
       ></motion.div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16 max-w-3xl mx-auto">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16 max-w-3xl mx-auto"
+        >
           <h2 className="text-primary font-bold tracking-widest uppercase text-sm mb-3">What We Do</h2>
           <h3 className="font-display font-extrabold text-4xl md:text-5xl text-white mb-6">Our Core Plumbing Services</h3>
           <p className="text-white/70 text-lg font-light">
             We handle everything from minor repairs to whole-home plumbing solutions across San Diego. 
             Honest pricing, every time.
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
           {SERVICES.map((service, index) => (
