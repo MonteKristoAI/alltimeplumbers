@@ -44,8 +44,8 @@ export function GallerySection() {
     <section id="gallery" className="py-24 bg-navy-ink relative overflow-hidden">
       {/* Texture Background */}
       <div 
-        className="absolute inset-0 opacity-20 pointer-events-none mix-blend-overlay"
-        style={{ backgroundImage: 'url("/images/section_bg.png")', backgroundSize: 'cover', backgroundPosition: 'center' }}
+        className="absolute inset-0 opacity-15 pointer-events-none mix-blend-overlay"
+        style={{ backgroundImage: 'url("/images/bg_gallery.png")', backgroundSize: 'cover', backgroundPosition: 'center' }}
       ></div>
       
       {/* Decorative glow */}

@@ -16,17 +16,17 @@ interface FAQProps {
 
 export function FAQ({ faqs }: FAQProps) {
   return (
-    <section className="py-24 bg-cream-deep relative overflow-hidden">
+    <section className="py-24 bg-navy-ink relative overflow-hidden">
       {/* Texture Background */}
       <div 
-        className="absolute inset-0 opacity-10 pointer-events-none mix-blend-overlay"
-        style={{ backgroundImage: 'url("/images/section_bg.png")', backgroundSize: 'cover', backgroundPosition: 'center' }}
+        className="absolute inset-0 opacity-15 pointer-events-none mix-blend-overlay"
+        style={{ backgroundImage: 'url("/images/bg_faq.png")', backgroundSize: 'cover', backgroundPosition: 'center' }}
       ></div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl relative z-10">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-primary font-bold tracking-widest uppercase text-sm">Got Questions?</h2>
-          <h3 className="font-display font-extrabold text-4xl md:text-5xl text-ink">Frequently Asked Questions</h3>
+          <h3 className="font-display font-extrabold text-4xl md:text-5xl text-white">Frequently Asked Questions</h3>
         </div>
         
         <Accordion type="single" collapsible className="w-full space-y-4">
