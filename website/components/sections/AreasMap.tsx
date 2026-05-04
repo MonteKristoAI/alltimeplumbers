@@ -5,7 +5,7 @@ import { MapPin } from "lucide-react";
 
 export function AreasMap() {
   return (
-    <section id="areas" className="py-24 bg-navy-ink relative overflow-hidden border-t border-white/5">
+    <section id="areas" className="py-24 bg-navy-ink relative overflow-hidden">
       {/* Decorative glow */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[120px] pointer-events-none -translate-y-1/2 translate-x-1/4"></div>
 

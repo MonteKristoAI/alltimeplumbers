@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export function OwnerIntro() {
   return (
-    <section className="py-24 bg-navy-ink relative overflow-hidden border-t border-white/5">
+    <section className="py-24 bg-navy-ink relative overflow-hidden">
       {/* Decorative glow */}
       <div className="absolute top-1/2 left-0 w-[400px] h-[400px] bg-primary/10 rounded-full blur-[120px] pointer-events-none -translate-y-1/2 -translate-x-1/2"></div>
 
