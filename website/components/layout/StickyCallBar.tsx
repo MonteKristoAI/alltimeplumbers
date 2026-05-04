@@ -1,9 +1,10 @@
 "use client";
 
-import { Phone, CalendarCheck } from "lucide-react";
+import { CalendarCheck } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useStickyCTA } from "@/hooks/useStickyCTA";
+import { motion, AnimatePresence } from "framer-motion";
 
 export function StickyCallBar() {
   const isVisible = useStickyCTA();
@@ -14,26 +15,24 @@ export function StickyCallBar() {
   }
 
   return (
-    <div
-      className={`fixed bottom-0 left-0 right-0 z-50 flex h-[64px] md:hidden transition-transform duration-300 ease-in-out ${
-        isVisible ? "translate-y-0" : "translate-y-full"
-      }`}
-      style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
-    >
-      <a
-        href="tel:+17602016461"
-        className="flex h-full w-[60%] items-center justify-center gap-2 bg-primary text-white font-bold tracking-wide"
-      >
-        <Phone className="h-5 w-5 fill-current" />
-        Call now
-      </a>
-      <Link
-        href="/book"
-        className="flex h-full w-[40%] items-center justify-center gap-2 bg-cream text-ink border-t-2 border-border font-semibold shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)]"
-      >
-        <CalendarCheck className="h-5 w-5" />
-        Book online
-      </Link>
-    </div>
+    <AnimatePresence>
+      {isVisible && (
+        <motion.div
+          initial={{ opacity: 0, y: 50, scale: 0.9 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          exit={{ opacity: 0, y: 50, scale: 0.9 }}
+          transition={{ duration: 0.3, ease: "easeOut" }}
+          className="fixed bottom-6 left-6 z-50 flex items-center justify-center"
+        >
+          <Link
+            href="/book"
+            className="flex items-center gap-3 bg-primary text-white font-bold px-6 py-4 rounded-full shadow-[0_10px_40px_rgba(191,34,53,0.5)] hover:bg-primary-deep hover:scale-105 transition-all duration-300 group border border-white/10"
+          >
+            <CalendarCheck className="h-5 w-5 group-hover:rotate-12 transition-transform duration-300" />
+            <span>Book a service</span>
+          </Link>
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
 }

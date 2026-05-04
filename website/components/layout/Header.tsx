@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -7,15 +8,19 @@ export function Header() {
     <header className="sticky top-0 z-40 w-full border-b border-border bg-cream/95 backdrop-blur supports-[backdrop-filter]:bg-cream/60">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex h-16 items-center justify-between">
         <div className="flex items-center gap-6">
-          <Link href="/" className="flex items-center gap-2 font-display font-bold text-xl tracking-tight text-ink">
-            <span className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center text-sm">A</span>
-            All Time Plumbers
+          <Link href="/" className="flex items-center gap-2">
+            <div className="relative h-10 w-40">
+              <Image 
+                src="/images/logo.png" 
+                alt="All Time Plumbers" 
+                fill 
+                className="object-contain object-left" 
+                priority
+              />
+            </div>
           </Link>
           <nav className="hidden md:flex gap-6">
             <Link href="/services" className="text-sm font-medium text-ink hover:text-primary transition-colors">Services</Link>
-            <Link href="/#areas" className="text-sm font-medium text-ink hover:text-primary transition-colors">Areas</Link>
-            <Link href="/#gallery" className="text-sm font-medium text-ink hover:text-primary transition-colors">Gallery</Link>
-            <Link href="/#reviews" className="text-sm font-medium text-ink hover:text-primary transition-colors">Reviews</Link>
             <Link href="/blog" className="text-sm font-medium text-ink hover:text-primary transition-colors">Blog</Link>
             <Link href="/about" className="text-sm font-medium text-ink hover:text-primary transition-colors">About</Link>
             <Link href="/contact" className="text-sm font-medium text-ink hover:text-primary transition-colors">Contact</Link>

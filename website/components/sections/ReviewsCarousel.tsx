@@ -30,6 +30,12 @@ const reviews = [
 export function ReviewsCarousel() {
   return (
     <section id="reviews" className="py-24 bg-navy-ink relative overflow-hidden">
+      {/* Texture Background */}
+      <div 
+        className="absolute inset-0 opacity-20 pointer-events-none mix-blend-overlay"
+        style={{ backgroundImage: 'url("/images/section_bg.png")', backgroundSize: 'cover', backgroundPosition: 'center' }}
+      ></div>
+
       {/* Glow effect */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-primary/20 rounded-full blur-[120px] pointer-events-none"></div>
 
@@ -74,6 +80,22 @@ export function ReviewsCarousel() {
             </motion.div>
           ))}
         </div>
+
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.6, duration: 0.6 }}
+          className="mt-16 flex justify-center"
+        >
+          <a 
+            href="#rate"
+            className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-full font-bold shadow-[0_0_30px_rgba(191,34,53,0.3)] hover:shadow-[0_0_50px_rgba(191,34,53,0.6)] hover:-translate-y-1 hover:bg-primary-deep transition-all duration-300"
+          >
+            <Star className="w-5 h-5 fill-current" />
+            Leave a Review
+          </a>
+        </motion.div>
       </div>
     </section>
   );

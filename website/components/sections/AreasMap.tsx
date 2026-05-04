@@ -34,8 +34,8 @@ export function AreasMap() {
           </div>
           
           <div className="w-full lg:w-1/2">
-            <div className="relative w-full aspect-square md:aspect-video lg:aspect-square bg-navy-ink rounded-2xl overflow-hidden shadow-xl flex items-center justify-center border-4 border-white">
-              <Image src="/images/map_illustration.png" alt="San Diego Service Area Map" fill className="object-cover" />
+            <div className="relative w-full aspect-square md:aspect-video lg:aspect-[4/3] bg-navy-ink rounded-2xl overflow-hidden shadow-2xl border border-white/10">
+              <Image src="/images/areas_map_sandiego.png" alt="San Diego Service Area Map" fill className="object-cover" />
             </div>
           </div>
         </div>
