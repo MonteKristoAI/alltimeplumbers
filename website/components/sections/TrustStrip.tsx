@@ -1,7 +1,5 @@
 import { Shield, Clock, Wrench, Star } from "lucide-react";
 
-import { Shield, Clock, Wrench, Star } from "lucide-react";
-
 export function TrustStrip() {
   return (
     <section className="bg-navy-ink py-10 relative overflow-hidden">
