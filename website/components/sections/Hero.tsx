@@ -79,14 +79,14 @@ export function Hero() {
           >
             <Link 
               href="/book" 
-              className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white bg-primary rounded-full hover:bg-primary-deep transition-all duration-300 shadow-[0_0_40px_rgba(191,34,53,0.4)] hover:shadow-[0_0_60px_rgba(191,34,53,0.6)] hover:-translate-y-1"
+              className="w-full sm:w-auto inline-flex items-center justify-center px-10 py-5 text-base font-bold text-white bg-primary rounded-full hover:bg-primary-deep transition-all duration-300 shadow-[0_0_40px_rgba(191,34,53,0.4)] hover:shadow-[0_0_60px_rgba(191,34,53,0.6)] hover:-translate-y-1"
             >
               <CalendarCheck className="w-5 h-5 mr-2" />
               Book a service
             </Link>
             <a 
               href="tel:+17602016461" 
-              className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white bg-white/5 backdrop-blur-md border border-white/20 rounded-full hover:bg-white/10 transition-all duration-300 hover:-translate-y-1 shadow-[0_0_20px_rgba(255,255,255,0.05)]"
+              className="w-full sm:w-auto inline-flex items-center justify-center px-10 py-5 text-base font-bold text-white bg-white/5 backdrop-blur-md border border-white/20 rounded-full hover:bg-white/10 transition-all duration-300 hover:-translate-y-1 shadow-[0_0_20px_rgba(255,255,255,0.05)]"
             >
               <Phone className="w-5 h-5 mr-2" />
               Call (760) 201-6461

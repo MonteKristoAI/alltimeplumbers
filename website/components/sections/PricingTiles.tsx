@@ -118,7 +118,7 @@ export function PricingTiles() {
                 <li className="flex items-center gap-2"><Check className="w-4 h-4 text-white" /> $150 emergency fee after 10PM</li>
                 <li className="flex items-center gap-2"><Check className="w-4 h-4 text-white" /> Photos help us quote accurately</li>
               </ul>
-              <Link href="/book" className="px-6 py-4 bg-white text-primary font-bold rounded-full hover:bg-cream transition-colors w-full text-center shadow-lg hover:shadow-xl hover:-translate-y-0.5 inline-block">
+              <Link href="/book" className="px-8 py-5 bg-white text-primary font-bold rounded-full hover:bg-cream transition-colors w-full text-center shadow-lg hover:shadow-xl hover:-translate-y-0.5 inline-block">
                 Request Service
               </Link>
             </div>

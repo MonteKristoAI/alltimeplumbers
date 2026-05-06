@@ -123,7 +123,7 @@ export function FinalCTA() {
               <div className="space-y-2">
                 <label className="text-sm font-medium text-white/80">Type of Service</label>
                 <Select>
-                  <SelectTrigger className="w-full bg-white/5 border-white/10 text-white placeholder:text-white/30 cursor-pointer backdrop-blur-sm focus:ring-primary h-10">
+                  <SelectTrigger className="w-full bg-white/5 border-white/10 text-white data-[placeholder]:text-white/30 cursor-pointer backdrop-blur-sm focus:ring-primary h-10">
                     <SelectValue placeholder="Select a service..." />
                   </SelectTrigger>
                   <SelectContent className="bg-navy-ink border border-white/10 text-white">
@@ -138,7 +138,7 @@ export function FinalCTA() {
                 <label htmlFor="message" className="text-sm font-medium text-white/80">How can we help?</label>
                 <Textarea id="message" placeholder="Describe your plumbing issue..." className="bg-white/5 border-white/10 focus-visible:ring-primary focus-visible:border-primary min-h-[120px] text-white placeholder:text-white/30 backdrop-blur-sm resize-none" />
               </div>
-              <Button type="submit" className="w-full bg-primary hover:bg-primary-deep text-white font-bold py-6 text-lg rounded-full mt-4 transition-all hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(191,34,53,0.4)] cursor-pointer">
+              <Button type="submit" className="w-full bg-primary hover:bg-primary-deep text-white font-bold py-7 text-lg rounded-full mt-4 transition-all hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(191,34,53,0.4)] cursor-pointer">
                 Send Request
               </Button>
             </form>

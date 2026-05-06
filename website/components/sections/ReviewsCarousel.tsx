@@ -111,7 +111,7 @@ export function ReviewsCarousel() {
         >
           <Dialog>
             <DialogTrigger asChild>
-              <button className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-full font-bold shadow-[0_0_30px_rgba(191,34,53,0.3)] hover:shadow-[0_0_50px_rgba(191,34,53,0.6)] hover:-translate-y-1 hover:bg-primary-deep transition-all duration-300 cursor-pointer">
+              <button className="inline-flex items-center gap-2 bg-primary text-white px-10 py-5 rounded-full font-bold shadow-[0_0_30px_rgba(191,34,53,0.3)] hover:shadow-[0_0_50px_rgba(191,34,53,0.6)] hover:-translate-y-1 hover:bg-primary-deep transition-all duration-300 cursor-pointer">
                 <Star className="w-5 h-5 fill-current" />
                 Leave a Review
               </button>

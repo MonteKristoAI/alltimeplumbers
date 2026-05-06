@@ -102,7 +102,7 @@ export function BookingFlow() {
                       <FormLabel className="text-white font-semibold text-base">Service Type</FormLabel>
                       <Select onValueChange={field.onChange} defaultValue={field.value}>
                         <FormControl>
-                          <SelectTrigger className="bg-white/5 border-white/20 text-white data-[placeholder]:text-white hover:bg-white/10 transition-colors focus:ring-navy-mute">
+                          <SelectTrigger className="bg-white/5 border-white/20 text-white data-[placeholder]:text-white/40 hover:bg-white/10 transition-colors focus:ring-navy-mute">
                              <SelectValue placeholder="Select a service" />
                           </SelectTrigger>
                         </FormControl>
@@ -127,7 +127,7 @@ export function BookingFlow() {
                       <FormLabel className="text-white font-semibold text-base">Urgency</FormLabel>
                       <Select onValueChange={field.onChange} defaultValue={field.value}>
                         <FormControl>
-                          <SelectTrigger className="bg-white/5 border-white/20 text-white data-[placeholder]:text-white hover:bg-white/10 transition-colors focus:ring-navy-mute">
+                          <SelectTrigger className="bg-white/5 border-white/20 text-white data-[placeholder]:text-white/40 hover:bg-white/10 transition-colors focus:ring-navy-mute">
                             <SelectValue placeholder="How urgent is this?" />
                           </SelectTrigger>
                         </FormControl>
