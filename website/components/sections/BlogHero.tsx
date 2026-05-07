@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 export function BlogHero() {
   return (
     <section 
-      className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-navy-ink pt-28 pb-24"
+      className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-navy-ink pt-32 lg:pt-28 pb-24"
     >
       <Image 
         src="/images/bg_faq.webp" 

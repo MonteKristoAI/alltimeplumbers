@@ -17,7 +17,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   return (
     <>
-      <div className="bg-navy-ink py-24 text-center text-cream">
+      <div className="bg-navy-ink pt-32 lg:pt-28 pb-24 text-center text-cream">
         <h1 className="font-display font-extrabold text-4xl md:text-5xl mb-6 text-white capitalize">{slug.replace('-', ' ')} Plumbing</h1>
         <p className="text-xl text-white/80 max-w-2xl mx-auto">Fast, local, and honest plumbing services for your community.</p>
       </div>

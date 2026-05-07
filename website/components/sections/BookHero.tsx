@@ -7,7 +7,7 @@ import { BookingFlow } from "@/components/booking/BookingFlow";
 export function BookHero() {
   return (
     <section 
-      className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-primary-deep pt-28 pb-24"
+      className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-primary-deep pt-32 lg:pt-28 pb-24"
     >
       <Image 
         src="/images/bg_book_hero.webp" 

@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 export function Hero() {
   return (
     <section
-      className="relative min-h-[95vh] flex items-center justify-center overflow-hidden bg-navy-ink pt-32 lg:pt-20"
+      className="relative min-h-[95vh] flex items-center justify-center overflow-hidden bg-navy-ink pt-32 lg:pt-28"
     >
       <Image 
         src="/images/hero_bg.webp" 

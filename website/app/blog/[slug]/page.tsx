@@ -53,7 +53,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   return (
     <>
-      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-navy-ink pt-28 pb-24 section-shadow-top">
+      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-navy-ink pt-32 lg:pt-28 pb-24 section-shadow-top">
         <Image src={post.image} alt="" fill aria-hidden sizes="100vw" className="absolute inset-0 opacity-30 pointer-events-none mix-blend-luminosity object-cover" />
         
         <div className="absolute inset-0 bg-gradient-to-b from-navy-ink/60 via-transparent to-navy-ink/90 pointer-events-none"></div>
