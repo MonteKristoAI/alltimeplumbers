@@ -12,10 +12,7 @@ export function FinalCTA() {
   return (
     <section id="contact" className="py-24 bg-navy-ink text-white relative overflow-hidden">
       {/* Texture Background */}
-      <div 
-        className="absolute inset-0 opacity-20 pointer-events-none mix-blend-overlay"
-        style={{ backgroundImage: 'url("/images/bg_contact.png")', backgroundSize: 'cover', backgroundPosition: 'center' }}
-      ></div>
+      <Image src="/images/bg_contact.webp" alt="" fill aria-hidden sizes="100vw" className="absolute inset-0 opacity-20 pointer-events-none mix-blend-overlay object-cover" />
 
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">

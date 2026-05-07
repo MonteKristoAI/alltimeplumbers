@@ -11,7 +11,7 @@ export function ContactHero() {
       className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-neutral-950 pt-28 pb-24"
     >
       <Image 
-        src="/images/bg_contact.png" 
+        src="/images/bg_contact.webp" 
         alt="Contact All Time Plumbers" 
         fill 
         priority
@@ -19,7 +19,7 @@ export function ContactHero() {
       />
       
       {/* Animated Red Glow Lines */}
-      <div className="absolute inset-0 pointer-events-none opacity-40">
+      <div className="absolute inset-0 pointer-events-none opacity-40 hidden lg:block">
         <motion.div 
           animate={{ y: ["-100%", "200%"] }}
           transition={{ duration: 8, repeat: Infinity, ease: "linear" }}

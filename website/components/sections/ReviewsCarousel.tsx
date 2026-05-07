@@ -88,10 +88,7 @@ export function ReviewsCarousel() {
   return (
     <section id="reviews" className="py-24 bg-navy-ink relative overflow-hidden">
       {/* Texture Background */}
-      <div 
-        className="absolute inset-0 opacity-15 pointer-events-none mix-blend-overlay"
-        style={{ backgroundImage: 'url("/images/bg_reviews.png")', backgroundSize: 'cover', backgroundPosition: 'center' }}
-      ></div>
+      <Image src="/images/bg_reviews.webp" alt="" fill aria-hidden sizes="100vw" className="absolute inset-0 opacity-15 pointer-events-none mix-blend-overlay object-cover" />
 
       {/* Glow effect */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-primary/20 rounded-full blur-[120px] pointer-events-none"></div>

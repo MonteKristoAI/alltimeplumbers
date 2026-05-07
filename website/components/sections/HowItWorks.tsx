@@ -1,6 +1,7 @@
 "use client";
 
 import { CalendarCheck, Truck, CheckCircle2 } from "lucide-react";
+import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
@@ -18,10 +19,7 @@ export function HowItWorks() {
   return (
     <section ref={containerRef} className="py-24 bg-navy-ink relative overflow-hidden">
       {/* Texture Background */}
-      <div 
-        className="absolute inset-0 opacity-10 pointer-events-none mix-blend-overlay"
-        style={{ backgroundImage: 'url("/images/section_bg.png")', backgroundSize: 'cover', backgroundPosition: 'center' }}
-      ></div>
+      <Image src="/images/section_bg.webp" alt="" fill aria-hidden sizes="100vw" className="absolute inset-0 opacity-10 pointer-events-none mix-blend-overlay object-cover" />
 
       {/* Floating Animated Background Blobs */}
       <motion.div 
@@ -31,7 +29,7 @@ export function HowItWorks() {
           scale: [1, 1.1, 1]
         }}
         transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-        className="absolute top-1/4 left-1/4 w-[300px] h-[300px] bg-primary/10 rounded-full blur-[80px] pointer-events-none"
+        className="absolute top-1/4 left-1/4 w-[300px] h-[300px] bg-primary/10 rounded-full blur-[80px] pointer-events-none hidden lg:block"
       ></motion.div>
       <motion.div 
         animate={{ 
@@ -40,7 +38,7 @@ export function HowItWorks() {
           scale: [1, 1.2, 1]
         }}
         transition={{ duration: 12, repeat: Infinity, ease: "linear", delay: 1 }}
-        className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-blue-500/10 rounded-full blur-[100px] pointer-events-none"
+        className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-blue-500/10 rounded-full blur-[100px] pointer-events-none hidden lg:block"
       ></motion.div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

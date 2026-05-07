@@ -1,6 +1,7 @@
 "use client";
 
 import { PRICING } from "@/data/pricing";
+import Image from "next/image";
 import { Check } from "lucide-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -9,10 +10,7 @@ export function PricingTiles() {
   return (
     <section className="py-24 bg-neutral-950 relative overflow-hidden border-t border-white/10 section-shadow-top">
       {/* Background Image */}
-      <div 
-        className="absolute inset-0 opacity-25 pointer-events-none mix-blend-luminosity"
-        style={{ backgroundImage: 'url("/images/bg_pricing.png")', backgroundSize: 'cover', backgroundPosition: 'center' }}
-      ></div>
+      <Image src="/images/bg_pricing.webp" alt="" fill aria-hidden sizes="100vw" className="absolute inset-0 opacity-25 pointer-events-none mix-blend-luminosity object-cover" />
       
       {/* Dark gradient overlay to ensure text readability */}
       <div className="absolute inset-0 bg-gradient-to-b from-neutral-950/80 via-transparent to-neutral-950/90 pointer-events-none"></div>
@@ -110,7 +108,7 @@ export function PricingTiles() {
             transition={{ delay: 0.6, duration: 0.5 }}
             className="p-8 bg-gradient-to-br from-primary/90 to-primary-deep text-white rounded-2xl shadow-[0_15px_40px_rgba(191,34,53,0.4)] flex flex-col items-start justify-center relative overflow-hidden"
           >
-            <div className="absolute inset-0 bg-[url('/images/section_bg.png')] opacity-20 mix-blend-overlay pointer-events-none"></div>
+            <div className="absolute inset-0 bg-[url('/images/section_bg.webp')] opacity-20 mix-blend-overlay pointer-events-none"></div>
             <div className="relative z-10">
               <h3 className="font-display font-bold text-2xl mb-4 text-white">Need a specific quote?</h3>
               <ul className="space-y-3 mb-8 text-white/90 text-sm">

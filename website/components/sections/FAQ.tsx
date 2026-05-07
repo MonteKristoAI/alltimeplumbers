@@ -6,6 +6,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 interface FAQItem {
@@ -21,10 +22,7 @@ export function FAQ({ faqs }: FAQProps) {
   return (
     <section className="py-24 bg-navy-ink relative overflow-hidden">
       {/* Texture Background */}
-      <div 
-        className="absolute inset-0 opacity-15 pointer-events-none mix-blend-overlay"
-        style={{ backgroundImage: 'url("/images/bg_faq.png")', backgroundSize: 'cover', backgroundPosition: 'center' }}
-      ></div>
+      <Image src="/images/bg_faq.webp" alt="" fill aria-hidden sizes="100vw" className="absolute inset-0 opacity-15 pointer-events-none mix-blend-overlay object-cover" />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl relative z-10">
         <motion.div 

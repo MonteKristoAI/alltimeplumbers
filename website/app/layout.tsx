@@ -75,7 +75,7 @@ export default function RootLayout({
     "url": "https://alltimeplumbers.com",
     "telephone": "+17602016461",
     "image": "https://alltimeplumbers.com/opengraph-image",
-    "logo": "https://alltimeplumbers.com/images/ATPLogo.png",
+    "logo": "https://alltimeplumbers.com/images/logo_alltime.webp",
     "priceRange": "$$",
     "foundingDate": "2018",
     "founder": {

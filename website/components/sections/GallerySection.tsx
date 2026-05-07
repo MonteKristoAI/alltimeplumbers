@@ -9,10 +9,7 @@ export function GallerySection() {
   return (
     <section id="gallery" className="py-24 bg-neutral-950 relative overflow-hidden border-t border-white/10 section-shadow-top">
       {/* Background Image */}
-      <div 
-        className="absolute inset-0 opacity-40 pointer-events-none mix-blend-luminosity"
-        style={{ backgroundImage: 'url("/images/bg_gallery_interior.png")', backgroundSize: 'cover', backgroundPosition: 'center' }}
-      ></div>
+      <Image src="/images/bg_gallery_interior.webp" alt="" fill aria-hidden sizes="100vw" className="absolute inset-0 opacity-40 pointer-events-none mix-blend-luminosity object-cover" />
       
       {/* Dark gradient overlay to ensure text readability */}
       <div className="absolute inset-0 bg-gradient-to-b from-neutral-950/80 via-transparent to-neutral-950/90 pointer-events-none"></div>
@@ -46,7 +43,7 @@ export function GallerySection() {
               <Link href={service.href} className="flex flex-col h-full" onClick={() => window.scrollTo({ top: 0 })}>
                 <div className="aspect-[4/3] relative overflow-hidden flex items-center justify-center">
                   <Image 
-                    src={service.image || "/images/gallery_1.png"} 
+                    src={service.image || "/images/gallery_1.webp"} 
                     alt={service.title} 
                     fill 
                     className="object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out" 

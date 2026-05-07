@@ -71,7 +71,7 @@ export function Header() {
             }`}
           >
             <Image
-              src="/images/logo_alltime.png"
+              src="/images/logo_alltime.webp"
               alt="All Time Plumbers"
               fill
               className="object-contain transition-transform duration-300 group-hover:scale-105"
@@ -152,7 +152,7 @@ export function Header() {
               >
                 <div className="relative h-12 w-12">
                   <Image
-                    src="/images/logo_alltime.png"
+                    src="/images/logo_alltime.webp"
                     alt="All Time Plumbers"
                     fill
                     className="object-contain"

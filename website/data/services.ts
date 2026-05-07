@@ -7,7 +7,7 @@ export const SERVICES = [
     icon: "Wind",
     href: "/services/drain-cleaning",
     price: "$250–$450 typical",
-    image: "/images/clean_pipes.png",
+    image: "/images/clean_pipes.webp",
     galleryTitle: "Professional Clog Removal"
   },
   {
@@ -18,7 +18,7 @@ export const SERVICES = [
     icon: "Flame",
     href: "/services/water-heater",
     price: "$1,800–$3,800 install",
-    image: "/images/water_heater.png",
+    image: "/images/water_heater.webp",
     galleryTitle: "Tank & Tankless Installation"
   },
   {
@@ -29,7 +29,7 @@ export const SERVICES = [
     icon: "Droplet",
     href: "/services/leak-repair",
     price: "From $295",
-    image: "/images/gallery_2.png",
+    image: "/images/gallery_2.webp",
     galleryTitle: "Copper Pipe Soldering & Repair"
   },
   {
@@ -40,7 +40,7 @@ export const SERVICES = [
     icon: "Wrench",
     href: "/services/repipe",
     price: "$7,500–$15,000",
-    image: "/images/bg_services_plumbing.png",
+    image: "/images/bg_services_plumbing.webp",
     galleryTitle: "Complete Plumbing Overhaul"
   },
   {
@@ -51,7 +51,7 @@ export const SERVICES = [
     icon: "AlarmClock",
     href: "/services/emergency",
     price: "$89 service call",
-    image: "/images/bg_services_hero.png",
+    image: "/images/bg_services_hero.webp",
     galleryTitle: "Rapid Response Repair"
   }
 ];

@@ -9,7 +9,7 @@ export function AboutHero() {
       className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-primary-deep pt-28 pb-24"
     >
       <Image 
-        src="/images/team_of_plumbers.png" 
+        src="/images/team_of_plumbers.webp" 
         alt="Team of professional plumbers from All Time Plumbers" 
         fill 
         priority
@@ -17,7 +17,7 @@ export function AboutHero() {
       />
       
       {/* Animated Blue Glow Lines (Contrasting the Red Background) */}
-      <div className="absolute inset-0 pointer-events-none opacity-50">
+      <div className="absolute inset-0 pointer-events-none opacity-50 hidden lg:block">
         <motion.div 
           animate={{ y: ["-100%", "200%"] }}
           transition={{ duration: 8, repeat: Infinity, ease: "linear" }}

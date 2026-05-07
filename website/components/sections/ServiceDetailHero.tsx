@@ -21,7 +21,7 @@ export function ServiceDetailHero({ service }: ServiceProps) {
       className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-primary-deep pt-28 pb-24"
     >
       <Image 
-        src={service.image || "/images/bg_services_hero.png"} 
+        src={service.image || "/images/bg_services_hero.webp"} 
         alt={service.title}
         fill 
         priority
@@ -29,7 +29,7 @@ export function ServiceDetailHero({ service }: ServiceProps) {
       />
       
       {/* Animated Blue Glow Lines */}
-      <div className="absolute inset-0 pointer-events-none opacity-50">
+      <div className="absolute inset-0 pointer-events-none opacity-50 hidden lg:block">
         <motion.div 
           animate={{ y: ["-100%", "200%"] }}
           transition={{ duration: 8, repeat: Infinity, ease: "linear" }}

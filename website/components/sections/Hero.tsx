@@ -11,7 +11,7 @@ export function Hero() {
       className="relative min-h-[95vh] flex items-center justify-center overflow-hidden bg-navy-ink pt-32 lg:pt-20"
     >
       <Image 
-        src="/images/hero_bg.png" 
+        src="/images/hero_bg.webp" 
         alt="Modern bathroom plumbing" 
         fill 
         priority
@@ -19,7 +19,7 @@ export function Hero() {
       />
       
       {/* Animated Red Glow Lines */}
-      <div className="absolute inset-0 pointer-events-none opacity-40">
+      <div className="absolute inset-0 pointer-events-none opacity-40 hidden lg:block">
         <motion.div 
           animate={{ y: ["-100%", "200%"] }}
           transition={{ duration: 8, repeat: Infinity, ease: "linear" }}

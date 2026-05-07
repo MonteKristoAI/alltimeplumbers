@@ -11,7 +11,7 @@ export function Footer() {
           <div className="space-y-6">
             <Link href="/" className="flex items-center gap-3 font-display font-bold text-2xl tracking-tight text-white group">
               <div className="relative w-10 h-10 drop-shadow-md bg-white rounded-full p-1 shrink-0 transition-transform duration-300 group-hover:scale-110">
-                <Image src="/images/logo_alltime.png" alt="All Time Plumbers" fill className="object-contain p-1" />
+                <Image src="/images/logo_alltime.webp" alt="All Time Plumbers" fill className="object-contain p-1" />
               </div>
               All Time Plumbers
             </Link>

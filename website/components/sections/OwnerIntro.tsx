@@ -7,10 +7,7 @@ export function OwnerIntro() {
   return (
     <section className="py-24 bg-neutral-950 relative overflow-hidden border-t border-white/10 section-shadow-top">
       {/* Background Image */}
-      <div 
-        className="absolute inset-0 opacity-25 pointer-events-none mix-blend-luminosity"
-        style={{ backgroundImage: 'url("/images/bg_owner.png")', backgroundSize: 'cover', backgroundPosition: 'center' }}
-      ></div>
+      <Image src="/images/bg_owner.webp" alt="" fill aria-hidden sizes="100vw" className="absolute inset-0 opacity-25 pointer-events-none mix-blend-luminosity object-cover" />
       
       {/* Dark gradient overlay to ensure text readability */}
       <div className="absolute inset-0 bg-gradient-to-b from-neutral-950/80 via-transparent to-neutral-950/90 pointer-events-none"></div>
@@ -29,7 +26,7 @@ export function OwnerIntro() {
           >
             <div className="absolute inset-0 bg-primary/20 rounded-full blur-[50px] scale-90"></div>
             <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-[6px] border-primary-deep shadow-[0_20px_50px_rgba(0,0,0,0.9)] bg-black flex items-center justify-center group">
-               <Image src="/images/pete_portrait.png" alt="Pete McNamara, Owner of All Time Plumbers" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+               <Image src="/images/pete_portrait.webp" alt="Pete McNamara, Owner of All Time Plumbers" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
                <div className="absolute inset-0 border-4 border-black/20 rounded-full pointer-events-none"></div>
             </div>
           </motion.div>

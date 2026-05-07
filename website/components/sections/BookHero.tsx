@@ -10,7 +10,7 @@ export function BookHero() {
       className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-primary-deep pt-28 pb-24"
     >
       <Image 
-        src="/images/bg_book_hero.png" 
+        src="/images/bg_book_hero.webp" 
         alt="Booking plumbing service online" 
         fill 
         priority
@@ -18,7 +18,7 @@ export function BookHero() {
       />
       
       {/* Animated Blue Glow Lines (Contrasting the Red Background) */}
-      <div className="absolute inset-0 pointer-events-none opacity-50">
+      <div className="absolute inset-0 pointer-events-none opacity-50 hidden lg:block">
         <motion.div 
           animate={{ y: ["-100%", "200%"] }}
           transition={{ duration: 8, repeat: Infinity, ease: "linear" }}

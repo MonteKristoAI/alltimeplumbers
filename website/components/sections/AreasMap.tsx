@@ -10,10 +10,7 @@ export function AreasMap() {
   return (
     <section id="areas" className="py-24 bg-navy-ink relative overflow-hidden border-t border-white/10 section-shadow-top">
       {/* Background Image */}
-      <div 
-        className="absolute inset-0 opacity-40 pointer-events-none mix-blend-luminosity"
-        style={{ backgroundImage: 'url("/images/bg_areas.png")', backgroundSize: 'cover', backgroundPosition: 'center' }}
-      ></div>
+      <Image src="/images/bg_areas.webp" alt="" fill aria-hidden sizes="100vw" className="absolute inset-0 opacity-40 pointer-events-none mix-blend-luminosity object-cover" />
       
       {/* Complex cinematic gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-navy-ink/60 via-transparent to-navy-ink/90 pointer-events-none"></div>
@@ -90,7 +87,7 @@ export function AreasMap() {
           >
             <div className="relative w-full aspect-square md:aspect-video lg:aspect-[4/3] bg-navy-ink rounded-2xl overflow-hidden shadow-[0_10px_50px_rgba(0,0,0,0.5)] border border-white/10 group">
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
-              <Image src="/images/areas_map_sandiego.png" alt="San Diego Service Area Map" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+              <Image src="/images/areas_map_sandiego.webp" alt="San Diego Service Area Map" fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
             </div>
           </motion.div>
         </div>

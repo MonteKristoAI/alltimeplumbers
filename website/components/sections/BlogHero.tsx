@@ -9,7 +9,7 @@ export function BlogHero() {
       className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-navy-ink pt-28 pb-24"
     >
       <Image 
-        src="/images/bg_faq.png" 
+        src="/images/bg_faq.webp" 
         alt="Plumbing advice and insights" 
         fill 
         priority
@@ -17,7 +17,7 @@ export function BlogHero() {
       />
       
       {/* Animated Red Glow Lines */}
-      <div className="absolute inset-0 pointer-events-none opacity-40">
+      <div className="absolute inset-0 pointer-events-none opacity-40 hidden lg:block">
         <motion.div 
           animate={{ y: ["-100%", "200%"] }}
           transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
