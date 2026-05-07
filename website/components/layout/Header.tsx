@@ -6,6 +6,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Phone, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { setMobileMenuOpenGlobal } from "@/hooks/useMobileMenu";
 
 const navItems = [
   { name: "Home", href: "/" },
@@ -27,6 +28,10 @@ export function Header() {
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    setMobileMenuOpenGlobal(isMobileMenuOpen);
+  }, [isMobileMenuOpen]);
 
   const isLinkActive = (href: string) =>
     href === "/" ? pathname === "/" : pathname.startsWith(href);

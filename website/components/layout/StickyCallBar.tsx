@@ -4,10 +4,12 @@ import { CalendarCheck } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useStickyCTA } from "@/hooks/useStickyCTA";
+import { useMobileMenuOpen } from "@/hooks/useMobileMenu";
 import { motion, AnimatePresence } from "framer-motion";
 
 export function StickyCallBar() {
   const isVisible = useStickyCTA();
+  const isMobileMenuOpen = useMobileMenuOpen();
   const pathname = usePathname();
 
   if (pathname === "/book" || pathname === "/contact" || (pathname.startsWith("/services/") && pathname !== "/services")) {
@@ -16,13 +18,13 @@ export function StickyCallBar() {
 
   return (
     <AnimatePresence>
-      {isVisible && (
+      {isVisible && !isMobileMenuOpen && (
         <motion.div
           initial={{ opacity: 0, y: 50, scale: 0.9 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: 50, scale: 0.9 }}
           transition={{ duration: 0.3, ease: "easeOut" }}
-          className="fixed bottom-5 left-5 z-50 flex items-center justify-center"
+          className="fixed bottom-4 left-4 sm:bottom-5 sm:left-5 z-50 flex items-center justify-center"
         >
           <Link
             href="/book"
