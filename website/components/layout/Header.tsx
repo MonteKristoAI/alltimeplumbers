@@ -38,16 +38,18 @@ export function Header() {
         transition={{ duration: 0.35, ease: [0.22, 0.61, 0.36, 1] }}
         className={`pointer-events-auto w-full flex items-center justify-between transition-[background-color,box-shadow,border-color] duration-300 ${
           isScrolled
-            ? "max-w-5xl bg-cream/95 backdrop-blur-xl border border-ink/10 rounded-full py-2 px-3 sm:px-4 shadow-[0_10px_30px_rgba(4,17,34,0.12)] mt-1"
-            : "max-w-7xl bg-cream/70 backdrop-blur-md border border-white/50 rounded-3xl py-3 px-4 sm:px-6 shadow-[0_4px_20px_rgba(4,17,34,0.06)]"
+            ? "max-w-6xl bg-cream/95 backdrop-blur-xl border border-ink/10 rounded-full py-3 px-4 sm:px-5 shadow-[0_10px_30px_rgba(4,17,34,0.12)] mt-1"
+            : "max-w-[88rem] bg-cream/70 backdrop-blur-md border border-white/50 rounded-3xl py-5 px-5 sm:px-7 shadow-[0_6px_24px_rgba(4,17,34,0.08)]"
         }`}
       >
-        {/* Logo */}
+        {/* Logo — protrudes at top, snaps into pill when scrolled */}
         <Link href="/" className="flex items-center group flex-shrink-0">
           <motion.div
             layout
-            className={`relative transition-all duration-300 ${
-              isScrolled ? "h-11 w-11 sm:h-12 sm:w-12" : "h-14 w-14 sm:h-16 sm:w-16"
+            className={`relative drop-shadow-[0_6px_18px_rgba(4,17,34,0.25)] transition-all duration-300 ${
+              isScrolled
+                ? "h-12 w-12 sm:h-14 sm:w-14"
+                : "h-20 w-20 sm:h-28 sm:w-28 -my-4 sm:-my-7"
             }`}
           >
             <Image
@@ -61,14 +63,16 @@ export function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-7">
+        <nav className="hidden lg:flex items-center gap-8">
           {navItems.map((item) => {
             const active = isLinkActive(item.href);
             return (
               <Link
                 key={item.name}
                 href={item.href}
-                className="relative text-sm font-bold text-ink uppercase tracking-wider group py-1"
+                className={`relative font-bold text-ink uppercase tracking-wider group py-1 transition-[font-size] duration-300 ${
+                  isScrolled ? "text-sm" : "text-base"
+                }`}
               >
                 <span className={active ? "text-primary" : "group-hover:text-primary transition-colors"}>
                   {item.name}
@@ -87,15 +91,15 @@ export function Header() {
         <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
           <a
             href="tel:+17602016461"
-            className={`hidden sm:inline-flex items-center gap-2 rounded-full font-bold tracking-wide transition-all hover:-translate-y-0.5 group text-sm ${
-              isScrolled ? "py-2 px-4" : "py-2.5 px-5"
+            className={`hidden sm:inline-flex items-center gap-2 rounded-full font-bold tracking-wide transition-all hover:-translate-y-0.5 group ${
+              isScrolled ? "py-2 px-4 text-sm" : "py-3 px-6 text-base"
             } ${
               isBookPage
                 ? "bg-navy hover:bg-navy-mute text-white shadow-[0_0_15px_rgba(27,46,85,0.3)] hover:shadow-[0_0_25px_rgba(27,46,85,0.5)]"
                 : "bg-primary hover:bg-primary-deep text-white shadow-[0_0_15px_rgba(191,34,53,0.3)] hover:shadow-[0_0_25px_rgba(191,34,53,0.5)]"
             }`}
           >
-            <Phone className="h-4 w-4 fill-current group-hover:animate-bounce" />
+            <Phone className={`fill-current group-hover:animate-bounce ${isScrolled ? "h-4 w-4" : "h-5 w-5"}`} />
             <span className="hidden md:inline">(760) 201-6461</span>
             <span className="md:hidden">Call</span>
           </a>
