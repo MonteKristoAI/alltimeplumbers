@@ -91,7 +91,7 @@ export function ServiceDetailHero({ service }: ServiceProps) {
             className="flex-shrink-0"
           >
             <Button asChild size="lg" className="bg-primary hover:bg-primary-deep text-white font-bold px-10 py-8 text-xl rounded-full shadow-[0_0_30px_rgba(191,34,53,0.5)] hover:shadow-[0_0_40px_rgba(191,34,53,0.7)] transition-all hover:-translate-y-1 group">
-              <Link href="/book">
+              <Link href={`/book?service=${service.id}`}>
                 Book a Service
                 <svg className="ml-2 w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />

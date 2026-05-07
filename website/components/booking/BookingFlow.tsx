@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { Suspense, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
@@ -12,6 +13,17 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { toast } from "sonner";
 import { motion, AnimatePresence } from "framer-motion";
+
+// Maps the service slug from /services/[slug] to the corresponding
+// BookingFlow Select option(s). Emergency has no service type
+// counterpart, so we pre-fill urgency instead.
+const SERVICE_PRESETS: Record<string, { serviceType?: string; urgency?: string }> = {
+  "drain-cleaning": { serviceType: "drain" },
+  "water-heater": { serviceType: "water-heater" },
+  "leak-repair": { serviceType: "leak" },
+  "repipe": { serviceType: "repipe" },
+  "emergency": { urgency: "emergency" },
+};
 
 const bookingSchema = z.object({
   serviceType: z.string().min(1, { message: "Please select a service" }),
@@ -30,15 +42,19 @@ const bookingSchema = z.object({
   }
 });
 
-export function BookingFlow() {
+function BookingFlowInner() {
+  const searchParams = useSearchParams();
+  const serviceSlug = searchParams.get("service");
+  const preset = serviceSlug ? SERVICE_PRESETS[serviceSlug] : undefined;
+
   const [step, setStep] = useState(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const form = useForm<z.infer<typeof bookingSchema>>({
     resolver: zodResolver(bookingSchema),
     defaultValues: {
-      serviceType: "",
-      urgency: "",
+      serviceType: preset?.serviceType ?? "",
+      urgency: preset?.urgency ?? "",
       name: "",
       phone: "",
       address: "",
@@ -251,5 +267,13 @@ export function BookingFlow() {
         </form>
       </Form>
     </div>
+  );
+}
+
+export function BookingFlow() {
+  return (
+    <Suspense fallback={null}>
+      <BookingFlowInner />
+    </Suspense>
   );
 }
