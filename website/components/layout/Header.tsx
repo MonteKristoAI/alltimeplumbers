@@ -48,7 +48,7 @@ export function Header() {
             layout
             className={`relative drop-shadow-[0_6px_18px_rgba(4,17,34,0.25)] transition-all duration-300 ${
               isScrolled
-                ? "h-12 w-12 sm:h-14 sm:w-14"
+                ? "h-16 w-16 sm:h-20 sm:w-20 -my-3 sm:-my-4"
                 : "h-20 w-20 sm:h-28 sm:w-28 -my-4 sm:-my-7"
             }`}
           >
