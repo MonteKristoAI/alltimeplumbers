@@ -7,8 +7,8 @@ import { motion } from "framer-motion";
 
 export function Hero() {
   return (
-    <section 
-      className="relative min-h-[95vh] flex items-center justify-center overflow-hidden bg-navy-ink pt-20"
+    <section
+      className="relative min-h-[95vh] flex items-center justify-center overflow-hidden bg-navy-ink pt-32 lg:pt-20"
     >
       <Image 
         src="/images/hero_bg.png" 

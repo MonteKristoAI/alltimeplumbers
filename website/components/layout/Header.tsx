@@ -20,13 +20,26 @@ export function Header() {
   const pathname = usePathname();
   const isBookPage = pathname === "/book";
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isCompactViewport, setIsCompactViewport] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  // Treat mobile/tablet (below the lg breakpoint) as always-compact so the
+  // pill never expands into its taller "top of page" state on small screens.
+  const isCompact = isScrolled || isCompactViewport;
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
     handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 1023px)");
+    const update = () => setIsCompactViewport(mq.matches);
+    update();
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
   }, []);
 
   useEffect(() => {
@@ -42,7 +55,7 @@ export function Header() {
         layout
         transition={{ duration: 0.35, ease: [0.22, 0.61, 0.36, 1] }}
         className={`pointer-events-auto w-full flex items-center justify-between transition-[background-color,box-shadow,border-color] duration-300 ${
-          isScrolled
+          isCompact
             ? "max-w-6xl bg-cream/95 backdrop-blur-xl border border-ink/10 rounded-full py-3 px-4 sm:px-5 shadow-[0_10px_30px_rgba(4,17,34,0.12)] mt-1"
             : "max-w-[88rem] bg-cream/70 backdrop-blur-md border border-white/50 rounded-3xl py-5 px-5 sm:px-7 shadow-[0_6px_24px_rgba(4,17,34,0.08)]"
         }`}
@@ -52,7 +65,7 @@ export function Header() {
           <motion.div
             layout
             className={`relative drop-shadow-[0_6px_18px_rgba(4,17,34,0.25)] transition-all duration-300 ${
-              isScrolled
+              isCompact
                 ? "h-16 w-16 sm:h-20 sm:w-20 -my-3 sm:-my-4"
                 : "h-20 w-20 sm:h-28 sm:w-28 -my-4 sm:-my-7"
             }`}
@@ -76,7 +89,7 @@ export function Header() {
                 key={item.name}
                 href={item.href}
                 className={`relative font-bold text-ink uppercase tracking-wider group py-1 transition-[font-size] duration-300 ${
-                  isScrolled ? "text-sm" : "text-base"
+                  isCompact ? "text-sm" : "text-base"
                 }`}
               >
                 <span className={active ? "text-primary" : "group-hover:text-primary transition-colors"}>
@@ -97,14 +110,14 @@ export function Header() {
           <a
             href="tel:+17602016461"
             className={`hidden sm:inline-flex items-center gap-2 rounded-full font-bold tracking-wide transition-all hover:-translate-y-0.5 group ${
-              isScrolled ? "py-2 px-4 text-sm" : "py-3 px-6 text-base"
+              isCompact ? "py-2 px-4 text-sm" : "py-3 px-6 text-base"
             } ${
               isBookPage
                 ? "bg-navy hover:bg-navy-mute text-white shadow-[0_0_15px_rgba(27,46,85,0.3)] hover:shadow-[0_0_25px_rgba(27,46,85,0.5)]"
                 : "bg-primary hover:bg-primary-deep text-white shadow-[0_0_15px_rgba(191,34,53,0.3)] hover:shadow-[0_0_25px_rgba(191,34,53,0.5)]"
             }`}
           >
-            <Phone className={`fill-current group-hover:animate-bounce ${isScrolled ? "h-4 w-4" : "h-5 w-5"}`} />
+            <Phone className={`fill-current group-hover:animate-bounce ${isCompact ? "h-4 w-4" : "h-5 w-5"}`} />
             <span className="hidden md:inline">(760) 201-6461</span>
             <span className="md:hidden">Call</span>
           </a>

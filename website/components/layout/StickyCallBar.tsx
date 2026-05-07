@@ -28,9 +28,9 @@ export function StickyCallBar() {
         >
           <Link
             href="/book"
-            className="flex items-center gap-3 bg-primary text-white font-bold px-8 py-5 rounded-full shadow-[0_10px_40px_rgba(191,34,53,0.5)] hover:bg-primary-deep hover:scale-105 transition-all duration-300 group border border-white/10"
+            className="flex items-center gap-2 sm:gap-3 bg-primary text-white font-bold px-5 py-3 text-sm sm:px-8 sm:py-5 sm:text-base rounded-full shadow-[0_10px_40px_rgba(191,34,53,0.5)] hover:bg-primary-deep hover:scale-105 transition-all duration-300 group border border-white/10"
           >
-            <CalendarCheck className="h-5 w-5 group-hover:rotate-12 transition-transform duration-300" />
+            <CalendarCheck className="h-4 w-4 sm:h-5 sm:w-5 group-hover:rotate-12 transition-transform duration-300" />
             <span>Book a service</span>
           </Link>
         </motion.div>
