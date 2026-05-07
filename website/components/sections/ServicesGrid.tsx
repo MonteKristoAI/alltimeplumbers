@@ -1,6 +1,7 @@
 "use client";
 
 import { SERVICES } from "@/data/services";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Wind, Flame, Droplet, Wrench, AlarmClock } from "lucide-react";
 import { motion } from "framer-motion";
