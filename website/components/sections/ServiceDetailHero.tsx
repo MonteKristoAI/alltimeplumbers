@@ -18,7 +18,7 @@ interface ServiceProps {
 export function ServiceDetailHero({ service }: ServiceProps) {
   return (
     <section 
-      className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-primary-deep pt-32 lg:pt-28 pb-24"
+      className="relative min-h-[80vh] lg:min-h-[60vh] flex items-center justify-center overflow-hidden bg-primary-deep pt-32 lg:pt-28 pb-24"
     >
       <Image 
         src={service.image || "/images/bg_services_hero.webp"} 
