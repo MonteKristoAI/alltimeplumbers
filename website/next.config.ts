@@ -3,6 +3,7 @@ const config: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   compress: true,
+  allowedDevOrigins: ['176.9.41.136', 'localhost'],
   images: {
     formats: ['image/avif', 'image/webp'],
     deviceSizes: [375, 640, 750, 828, 1080, 1200, 1440, 1920],
