@@ -159,14 +159,14 @@ export function ReviewsCarousel() {
               </button>
             </DialogTrigger>
             <DialogContent className="sm:max-w-[500px] bg-navy-ink border border-white/10 text-white overflow-hidden">
-              <AnimatePresence mode="wait" initial={false}>
+              <AnimatePresence mode="wait">
                 {step === "rating" && (
                   <motion.div
                     key="rating"
-                    initial={{ opacity: 0, y: 12 }}
+                    initial={{ opacity: 0, y: 16 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -12 }}
-                    transition={{ duration: 0.35, ease: [0.25, 0.1, 0.25, 1] }}
+                    transition={{ duration: 0.45, ease: [0.25, 0.1, 0.25, 1], delay: 0.15 }}
                   >
                     <DialogHeader>
                       <DialogTitle className="text-2xl font-display font-bold">Rate Our Service</DialogTitle>
